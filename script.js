@@ -1,5 +1,5 @@
 const yourShip = document.querySelector('.player-shooter');
-const.playArea = document.querySelector('#main-play-game');
+const playArea = document.querySelector('#main-play-game');
 
 // movimento e tiro da nave
 
@@ -11,7 +11,20 @@ function flyAhip(event) {
         event.preventDefault();
         moveDown();
     }else if(event.key === " ") {
-        EventTarget.preventDefault();
+        event.preventDefault();
         fireLaser();
+    }
+}
+
+// funcao de subir
+function moveUp() {
+    let topPosition = getComputedStyle(yourShip).getPropertyValue('top');
+    if(topPosition === "0px") {
+        return
+        
+    }else{
+        let position = parseInt (topPosition);
+        position -=50;
+        yourShip.style.top = '${position}px';
     }
 }
