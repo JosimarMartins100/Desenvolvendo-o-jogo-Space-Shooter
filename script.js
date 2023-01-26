@@ -165,7 +165,8 @@ function gameOver(){
     lasers.forEach((laser) => laser.remove());
     setTimeout(() => {
         alert('game over!');
-        yourShip.style.top = '250px';
+        yourShip.style.top = "250px";
+        startButton.style.display = "block";
         instructionsText.style.display = "block";
     });
 }
