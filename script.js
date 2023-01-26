@@ -3,10 +3,11 @@ const playArea = document.querySelector('#main-play-area');
 const aliensImg = ['img/monster-1.png','img/monster-2.png', 'img/monster-3.png'];
 const instructionsText = document.querySelector('.game-instructions');
 const startButton = document.querySelector('.start-button');
+let alienInterval;
 
 // movimento e tiro da nave
 
-function flyAhip(event) {
+function flyShip(event) {
     if(event.key === 'ArrowUp') {
         event. preventDefault();
         moveUp();
@@ -140,11 +141,31 @@ function checkLaserCollision(laser, alien) {
 }
 
 //Inicio do jogo
+
+startButton.addEventListener('click', (event) => {
+    playGame();
+})
+
 function playGame(){
-    
+    startButton.style.display = 'none';
+    instructionsText.style.display = 'none';
+    window.addEventListener('keydown', flyShip);
+    alienInterval = setInterval (() => {
+       createAliens();
+    }, 2000);
 }
+// funcao de game over
 
-window.addEventListener('keydown', flyAhip);
-
-
-
+function gameOver(){
+    window.removeEventListener('keydown', flyShip);
+    clearInterval(alienInterval);
+    let aliens = document.querySelectorAll('.alien');
+    aliens.forEach((alien) => alien.remove());
+    let laser = document.querySelectorAll('.laser');
+    lasers.forEach((laser) => laser.remove());
+    setTimeout(() => {
+        alert('game over!');
+        yourShip.style.top = '250px';
+        instructionsText.style.display = "block";
+    });
+}
