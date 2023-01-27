@@ -28,7 +28,7 @@ function moveUp() {
         
     }else{
         let position = parseInt (topPosition);
-        position -=50;
+        position -=30;
         yourShip.style.top = `${position}px`;
     }
 }
@@ -41,7 +41,7 @@ function moveDown() {
         return
     }else {
         let position = parseInt (topPosition);
-        position +=50;
+        position +=30;
         yourShip.style.top = `${position}px`;
     }
 }
@@ -161,10 +161,10 @@ function gameOver(){
     clearInterval(alienInterval);
     let aliens = document.querySelectorAll('.alien');
     aliens.forEach((alien) => alien.remove());
-    let laser = document.querySelectorAll('.laser');
+    let lasers = document.querySelectorAll('.laser');
     lasers.forEach((laser) => laser.remove());
     setTimeout(() => {
-        alert('game over!');
+        alert('game over! Comece novamente!');
         yourShip.style.top = "250px";
         startButton.style.display = "block";
         instructionsText.style.display = "block";
