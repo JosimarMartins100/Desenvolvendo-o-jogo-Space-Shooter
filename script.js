@@ -25,8 +25,7 @@ function moveUp() {
     let topPosition = getComputedStyle(yourShip).getPropertyValue('top');
     if(topPosition === "0px") {
         return
-        
-    }else{
+    }else {
         let position = parseInt (topPosition);
         position -=30;
         yourShip.style.top = `${position}px`;
