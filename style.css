@@ -27,9 +27,20 @@ body{
 .start-button{
     position: relative;
     color: white;
+    height: 90px;
+    width: 90px;
     top:9rem;
     left:15rem;
     cursor: pointer;
+}
+
+.iniciar {
+    position: relative;
+    height:90px;
+    width: 90px;
+    top:0rem;
+    left:1rem;
+    cursor:pointer;
 }
 
 .player-shooter{
@@ -39,6 +50,10 @@ body{
     left: 20px;
     top: 270px;
 }
+
+
+
+
 
 .laser {
     position: relative;
@@ -54,7 +69,7 @@ body{
 
 .alien-transition {
     opacity: 1;
-    transition: opacity 1.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .dead-alien {

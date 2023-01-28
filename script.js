@@ -103,7 +103,7 @@ function moveAlien(alien) {
     let moveAlienInterval = setInterval(() => {
         let xPosition = parseInt(window.getComputedStyle(alien).getPropertyValue('left'));
 
-        if (xPosition <=50) {
+        if (xPosition <=5) {
             if(Array.from(alien.classList).includes('dead-alien')) {
                 alien.remove();
             } else {
