@@ -1,6 +1,6 @@
 const yourShip = document.querySelector('.player-shooter');
 const playArea = document.querySelector('#main-play-area');
-const aliensImg = ['img/monster-1.png','img/monster-2.png', 'img/monster-3.png'];
+const aliensImg = ['img/monster-1.png','img/monster-2.png', 'img/monster-3.png', 'img/monster-4.png', 'img/monster-5.png'];
 const instructionsText = document.querySelector('.game-instructions');
 const startButton = document.querySelector('.start-button');
 let alienInterval;
