@@ -27,7 +27,7 @@ function moveUp() {
         return
     }else {
         let position = parseInt (topPosition);
-        position -=50;
+        position -=30;
         yourShip.style.top = `${position}px`;
     }
 }
@@ -36,11 +36,11 @@ function moveUp() {
 
 function moveDown() {
     let topPosition = getComputedStyle(yourShip).getPropertyValue('top');
-    if (topPosition === "500px") {
+    if (topPosition === "480px") {
         return
     }else {
         let position = parseInt (topPosition);
-        position +=50;
+        position +=30;
         yourShip.style.top = `${position}px`;
     }
 }
@@ -164,7 +164,7 @@ function gameOver(){
     lasers.forEach((laser) => laser.remove());
     setTimeout(() => {
         alert('game over! Comece novamente!');
-        yourShip.style.top = "250px";
+        yourShip.style.top = "270px";
         startButton.style.display = "block";
         instructionsText.style.display = "block";
     });
