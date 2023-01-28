@@ -27,7 +27,7 @@ function moveUp() {
         return
     }else {
         let position = parseInt (topPosition);
-        position -=30;
+        position -=50;
         yourShip.style.top = `${position}px`;
     }
 }
@@ -40,7 +40,7 @@ function moveDown() {
         return
     }else {
         let position = parseInt (topPosition);
-        position +=30;
+        position +=50;
         yourShip.style.top = `${position}px`;
     }
 }
